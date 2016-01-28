@@ -1,0 +1,6 @@
+docker run --name=container1 -d sparefoot/first
+docker run --name=container2 -d -p 9292:80 sparefoot/first
+docker run --name=container3 -d --link container1
+
+docker exec -ti container2 bash
+curl container1
