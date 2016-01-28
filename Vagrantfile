@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
      sudo touch /etc/apt/sources.list.d/docker.list
      sudo echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" >> /etc/apt/sources.list.d/docker.list
      sudo apt-get update
-     sudo apt-get install -y docker-engine
+     sudo apt-get install -y docker-engine mysql-client-5.6
      sudo usermod -aG docker vagrant
      sudo docker run hello-world
      sudo curl -L https://github.com/docker/compose/releases/download/1.5.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
