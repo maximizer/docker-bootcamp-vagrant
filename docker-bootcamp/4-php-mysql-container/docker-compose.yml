@@ -1,0 +1,21 @@
+webapp:
+  build: .
+  links:
+    - mysqlmaster:mysqlmaster
+  ports:
+    - 9999:80
+  environment:
+    - MASTER_HOST=mysqlmaster
+    - MASTER_DB=docker_bootcamp
+    - MASTER_USER=root
+    - MASTER_PASS=foo
+
+
+mysqlmaster:
+  image: mysql:5.6
+  ports:
+    - 3307:3306
+  environment:
+    - MYSQL_ROOT_PASSWORD=foo
+#  volumes:
+#    - /opt/docker/mysql/mysql-master:/var/lib/mysql
