@@ -1,7 +1,10 @@
+docker build -t sparefoot/server-info .
+docker run -d -p 9897:80 sparefoot/server-info
+
 docker login quay.io
 docker run -d sparefoot/first
 docker ps
-docker commit 07f2065197ef quay.io/patjmizer/first
-docker push quay.io/patjmizer/first
+docker commit 07f2065197ef quay.io/patjmizer/server-info
+docker push quay.io/patjmizer/server-info
 
-docker pull quay.io/patjmizer/first
+docker pull quay.io/patjmizer/server-info
