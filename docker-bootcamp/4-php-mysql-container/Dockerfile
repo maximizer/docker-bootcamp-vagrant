@@ -19,4 +19,4 @@ RUN ln -sf /dev/stderr /var/log/apache2/error.log
 
 # Expose port and run apache
 EXPOSE 80
-CMD ["apachectl", "-DFOREGROUND"]
+CMD ["apachectl", "-D", "FOREGROUND"]

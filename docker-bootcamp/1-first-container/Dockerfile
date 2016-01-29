@@ -16,4 +16,4 @@ COPY index.php /var/www/html/index.php
 
 # Expose port and run apache
 EXPOSE 80
-CMD ["apachectl", "-DFOREGROUND"]
+CMD ["apachectl", "-D", "FOREGROUND"]
