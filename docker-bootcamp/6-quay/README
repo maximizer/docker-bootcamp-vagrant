@@ -1,0 +1,7 @@
+docker login quay.io
+docker run -d sparefoot/first
+docker ps
+docker commit 07f2065197ef quay.io/patjmizer/first
+docker push quay.io/patjmizer/first
+
+docker pull quay.io/patjmizer/first
